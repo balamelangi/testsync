@@ -1,0 +1,10 @@
+image: atlassian/default-image:2
+pipelines:
+    branches:
+      beta1:
+        - step:
+           script:
+             - git remote add sync git@github.com:balamelangi/testsync.git
+             - git checkout beta1
+             - git pull    
+             - git push sync beta1
