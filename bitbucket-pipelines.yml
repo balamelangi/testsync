@@ -8,3 +8,10 @@ pipelines:
              - git checkout master
              - git pull    
              - git push sync master
+      beta1:
+        - step:
+           script:
+             - git remote add sync git@github.com:balamelangi/testsync.git
+             - git checkout beta1
+             - git pull    
+             - git push sync beta1
